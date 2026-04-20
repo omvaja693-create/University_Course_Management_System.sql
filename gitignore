@@ -1,0 +1,235 @@
+# ============================================================
+#   UNIVERSITY COURSE MANAGEMENT SYSTEM
+#   .gitignore — Keep your repo clean & secure 🎓
+# ============================================================
+
+
+# ============================================================
+# 🔐 ENVIRONMENT & SECRETS — Never commit credentials!
+# ============================================================
+.env
+.env.*
+.env.local
+.env.development
+.env.staging
+.env.production
+*.secret
+secrets/
+credentials/
+config/local.*
+db_config.*
+
+
+# ============================================================
+# 🗄️ DATABASE FILES & DUMPS
+# ============================================================
+# Exclude generated dumps — only keep the source .sql schema
+*.dump
+*.bak
+*.backup
+backups/
+dumps/
+
+# MySQL specific
+*.ibd
+*.frm
+*.MYD
+*.MYI
+ibdata*
+ib_logfile*
+mysql-bin.*
+mysql-error.log
+mysql.sock
+/data/
+
+
+# ============================================================
+# 🛠️ DATABASE TOOLS & GUI CONFIG
+# ============================================================
+# MySQL Workbench
+*.mwb.bak
+*.mwb~
+
+# DBeaver
+.dbeaver/
+*.dbeaver-data-sources.xml
+
+# TablePlus / DataGrip project files
+.idea/dataSources/
+.idea/dataSources.local.xml
+*.datasource.xml
+
+
+# ============================================================
+# 💻 OPERATING SYSTEM FILES
+# ============================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+
+# ============================================================
+# 📝 EDITORS & IDEs
+# ============================================================
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains (DataGrip, IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+auto-save-list
+tramp
+
+
+# ============================================================
+# 🐍 PYTHON (if using scripts to interact with the DB)
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+venv/
+env/
+.venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+
+# ============================================================
+# 🟨 NODE.JS (if using a JS/TS backend or admin panel)
+# ============================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+.yarn/cache
+.yarn/unplugged
+dist/
+build/
+.next/
+.nuxt/
+.cache/
+
+
+# ============================================================
+# ☕ JAVA (if using JDBC / Spring backend)
+# ============================================================
+*.class
+*.jar
+*.war
+*.ear
+target/
+.gradle/
+build/
+gradle-wrapper.jar
+hs_err_pid*
+
+
+# ============================================================
+# 📋 LOGS & TEMPORARY FILES
+# ============================================================
+*.log
+*.log.*
+logs/
+tmp/
+temp/
+*.tmp
+*.temp
+*.pid
+*.seed
+*.pid.lock
+
+
+# ============================================================
+# 📦 ARCHIVES & COMPILED OUTPUT
+# ============================================================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+
+
+# ============================================================
+# 📊 GENERATED REPORTS & EXPORTS
+# ============================================================
+reports/
+exports/
+*.csv
+*.xlsx
+*.xls
+# Keep any sample/template CSVs if needed:
+# !sample_data/*.csv
+
+
+# ============================================================
+# 🐳 DOCKER (if containerizing MySQL)
+# ============================================================
+.dockerenv
+docker-compose.override.yml
+docker-compose.local.yml
+
+
+# ============================================================
+# ✅ WHAT IS INTENTIONALLY TRACKED
+# ============================================================
+# University_Course_Management_System.sql  ← main schema & seed data
+# README.md                                ← project documentation
+# .gitignore                               ← this file
+# ============================================================
