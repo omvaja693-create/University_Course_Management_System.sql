@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS Departments (
 
 -- 2. Students Table
 CREATE TABLE IF NOT EXISTS Students (
-    StudentID      INT PRIMARY KEY,
+    StudentID      INT PRIMARY KEY AUTO_INCREMENT,
     FirstName      VARCHAR(50)  NOT NULL,
     LastName       VARCHAR(50)  NOT NULL,
     Email          VARCHAR(100) UNIQUE NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS Students (
 
 -- 3. Courses Table
 CREATE TABLE IF NOT EXISTS Courses (
-    CourseID     INT PRIMARY KEY,
+    CourseID     INT PRIMARY KEY AUTO_INCREMENT,
     CourseName   VARCHAR(100) NOT NULL,
     DepartmentID INT,
     Credits      INT          NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS Courses (
 
 -- 4. Instructors Table
 CREATE TABLE IF NOT EXISTS Instructors (
-    InstructorID INT PRIMARY KEY,
+    InstructorID INT PRIMARY KEY AUTO_INCREMENT,
     FirstName    VARCHAR(50)  NOT NULL,
     LastName     VARCHAR(50)  NOT NULL,
     Email        VARCHAR(100) UNIQUE NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS Instructors (
 
 -- 5. Enrollments Table
 CREATE TABLE IF NOT EXISTS Enrollments (
-    EnrollmentID   INT PRIMARY KEY,
+    EnrollmentID   INT PRIMARY KEY AUTO_INCREMENT,
     StudentID      INT,
     CourseID       INT,
     EnrollmentDate DATE NOT NULL,
